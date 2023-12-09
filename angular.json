@@ -34,7 +34,8 @@
               "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/simpleshops/"
           },
           "configurations": {
             "production": {
