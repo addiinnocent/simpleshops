@@ -1,0 +1,26 @@
+img {
+  height: 40px;
+  width: auto;
+  padding: 5px;
+}
+
+button.active {
+  background: rgba(0, 0, 0, 0.04)
+}
+
+.topbar {
+  background: transparent;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .topbar-logo {
+    filter: invert(100%);
+  }
+  button.active {
+    background: rgba(255, 255, 255, 0.04)
+  }
+}

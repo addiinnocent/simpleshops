@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="page-content" *ngIf="faqPage">
+    <h1>{{faqPage.title}}</h1>
+    <div [innerHTML]="faqPage.body"></div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<form class="example-form">
+  <div class="flex-searchbar">
+  <mat-form-field
+    class="search-field"
+    appearance="outline"
+  >
+    <mat-label>Search for a product</mat-label>
+    <input matInput [(ngModel)]="inputValue" name="search">
+    <button mat-icon-button matSuffix (click)="handleSubmit()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+  </div>
+</form>

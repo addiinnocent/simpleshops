@@ -1,0 +1,32 @@
+mat-grid-list {
+
+}
+
+mat-grid-tile {
+  display: inline-block;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+mat-grid-tile:hover {
+  border-color: blue;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.carousel-scroll {
+  display: inline-block;
+  width: 4000px;
+  padding-bottom: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  mat-grid-tile {
+    background: #424242;
+  }
+}

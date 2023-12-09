@@ -1,0 +1,21 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <app-topbar
+    [isDrawerOpen]="isDrawerOpen"
+    (toggleDrawerEvent)="toggleDrawer()"
+  />
+
+  <mat-drawer
+    [opened]="isDrawerOpen"
+    (closedStart)="isDrawerOpen = false"
+    (closedStart)="toggleScrollable()"
+    class="example-sidenav"
+    position="end"
+    mode="over"
+  >
+    <app-shoppingcart (closeDrawer)="isDrawerOpen = false"/>
+  </mat-drawer>
+
+  <ng-content #main></ng-content>
+
+  <app-footer />
+</mat-drawer-container>

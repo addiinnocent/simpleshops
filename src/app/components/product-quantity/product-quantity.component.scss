@@ -1,0 +1,28 @@
+mat-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+mat-icon:hover {
+  color: #aaa;
+}
+
+.product-quantity-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.product-quantity-counter {
+  font-size: 12px;
+  padding: 6px;
+}

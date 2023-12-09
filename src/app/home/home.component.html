@@ -1,0 +1,15 @@
+<div class="container">
+  <app-searchbar (searchFor)="searchFor($event)"/>
+
+  <mat-grid-list cols="8" gutterSize="16px">
+    <mat-grid-tile
+        *ngFor="let product of grid; let i = index"
+        [colspan]="tiles[i].cols"
+        [rowspan]="tiles[i].rows"
+    >
+      <app-product-tile [product]="product" />
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<app-carousel [products]="carousel" />

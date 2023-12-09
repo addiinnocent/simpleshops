@@ -1,0 +1,40 @@
+.container {
+  padding-top: 16px;
+}
+
+.shoppingcart-wrapper {
+  position: fixed;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  width: 400px;
+  max-width: 100%;
+}
+
+.shoppingcart-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.shoppingcart-list {
+  overflow-y: auto;
+}
+
+.shoppingcart-list .remove-icon {
+  cursor: pointer;
+}
+
+.proceed-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.shoppingcart-proceed button {
+  margin-bottom: 16px;
+  width: 100%;
+}

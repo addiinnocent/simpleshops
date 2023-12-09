@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="policy-content" *ngIf="refundPolicy">
+    <h1>{{refundPolicy.title}}</h1>
+    <div [innerHTML]="refundPolicy.body"></div>
+  </div>
+
+  <div class="policy-content" *ngIf="shippingPolicy">
+    <h1>{{shippingPolicy.title}}</h1>
+    <div [innerHTML]="shippingPolicy.body"></div>
+  </div>
+</div>

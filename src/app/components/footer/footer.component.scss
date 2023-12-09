@@ -1,0 +1,33 @@
+ul {
+  list-style-type: none;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li.active {
+  text-decoration: underline;
+}
+
+.container {
+  border-top: 1px solid #ddd;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.footer-top {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ddd;
+}

@@ -1,0 +1,38 @@
+<mat-toolbar class="topbar">
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      [class]="currentRoute == '/' ? 'active' : ''"
+      [routerLink]="['/']"
+    >Home</button>
+    <button
+      mat-menu-item
+      [class]="currentRoute == '/search' ? 'active' : ''"
+      [routerLink]="['/search']"
+    >Search</button>
+    <button
+      mat-menu-item
+      [class]="currentRoute == '/about' ? 'active' : ''"
+      [routerLink]="['/about']"
+    >About</button>
+  </mat-menu>
+
+  <img src="assets/logo.png" alt="Logo" class="topbar-logo" />
+
+  <span class="example-spacer"></span>
+
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    (click)="toggleDrawer()"
+  >
+    <mat-icon [matBadge]="amount" aria-hidden="false">shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,39 @@
+<div class="container footer-top">
+  <div class="footer-grid">
+    <ul>
+      <li
+        [class]="currentRoute == '/' ? 'active' : ''"
+        [routerLink]="['/']"
+      >Home</li>
+      <li
+        [class]="currentRoute == '/about' ? 'active' : ''"
+        [routerLink]="['/about']"
+      >About</li>
+      <li
+        [class]="currentRoute == '/terms-conditions' ? 'active' : ''"
+        [routerLink]="['/terms-conditions']"
+      >Terms & Conditions</li>
+      <li
+        [class]="currentRoute == '/shipping-return-policy' ? 'active' : ''"
+        [routerLink]="['/shipping-return-policy']"
+      >Shipping & Return Policy</li>
+      <li
+        [class]="currentRoute == '/privacy-policy' ? 'active' : ''"
+        [routerLink]="['/privacy-policy']"
+      >Privacy Policy</li>
+      <li
+        [class]="currentRoute == '/frequently-asked-questions' ? 'active' : ''"
+        [routerLink]="['/frequently-asked-questions']"
+      >FAQ</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="container footer-bottom">
+  <div class="footer-grid">
+    <p>© 2023 SimpleShops. All rights reserved.</p>
+    <p>Designed in Madeira</p>
+    <p>Crafed by <a href="https://yx3m1.com/devs/addiinnocent" target="_blank">addiinnocent</a></p>
+  </div>
+</div>

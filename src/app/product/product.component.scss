@@ -1,0 +1,34 @@
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.container {
+  padding: 16px;
+  max-width: 100vw;
+}
+
+.product-tile {
+  display: grid;
+  grid-template-columns: auto;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.product-description {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 960px) {
+  .product-tile {
+    grid-template-columns: 2fr 1fr;
+
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .product-tile {
+    background: #424242;
+  }
+}

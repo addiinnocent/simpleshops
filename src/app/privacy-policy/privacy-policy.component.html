@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="policy-content" *ngIf="privacyPolicy">
+    <h1>{{privacyPolicy.title}}</h1>
+    <div [innerHTML]="privacyPolicy.body"></div>
+  </div>
+</div>

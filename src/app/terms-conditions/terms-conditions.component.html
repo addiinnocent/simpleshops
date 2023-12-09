@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="policy-content" *ngIf="termsOfService">
+    <h1>{{termsOfService.title}}</h1>
+    <div [innerHTML]="termsOfService.body"></div>
+  </div>
+</div>

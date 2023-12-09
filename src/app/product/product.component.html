@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="product-tile" *ngIf="product$ | async as product;">
+
+    <app-image-slider [images]="product.images" />
+
+    <div class="container">
+      <h1>{{product.title}}</h1>
+
+      <mat-chip color="primary">
+        {{product?.priceRange?.minVariantPrice.amount|currency}}
+      </mat-chip>
+
+      <mat-divider></mat-divider>
+
+      <mat-button-toggle-group>
+        <mat-button-toggle
+          *ngFor="let variant of product?.variants"
+          (click)="selectVariant(variant)"
+          [value]="variant.id"
+        >
+          {{variant.title}}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <p class="product-description">
+        {{product?.description}}
+      </p>
+
+      <button
+        mat-fab
+        extended
+        color="primary"
+        [disabled]="loading"
+        (click)="handleAction()"
+      >
+        <mat-icon *ngIf="loading">
+          <mat-spinner diameter="25" />
+        </mat-icon>
+        Add to Shoppingcart
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h2>Related Products</h2>
+</div>
+
+<app-carousel [products]="recommended$ | async" />

@@ -1,0 +1,28 @@
+img {
+  width: 100%;
+}
+
+.image-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20%;
+}
+
+.image-slider-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.image-slider-content {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  transform: translateY(-6px);
+}

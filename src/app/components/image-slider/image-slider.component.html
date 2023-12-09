@@ -1,0 +1,25 @@
+<div class="image-slider">
+  <img [src]="images[current-1]?.src" [alt]="images[current-1]?.altText" />
+
+  <mat-chip class="image-slider-button">
+    <button
+      mat-icon-button
+      class="image-slider-back"
+      (click)="handleBack()"
+      [disabled]="current == 1"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="image-slider-content">
+      {{current}}/{{images.length}}
+    </div>
+    <button
+      mat-icon-button
+      class="image-slider-forward"
+      (click)="handleForward()"
+      [disabled]="current == images.length"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </mat-chip>
+</div>

@@ -1,0 +1,13 @@
+<a [routerLink]="['/products', product.id]">
+  <div class="product-tile">
+    <div class="img-container">
+      <img [src]="product.featuredImage?.src" [alt]="product.media?.alt" />
+    </div>
+    <mat-chip class="product-title-chip">
+      {{product.title}}
+      <mat-chip color="primary" highlighted>
+        {{product.priceRange.minVariantPrice.amount|currency}}
+      </mat-chip>
+    </mat-chip>
+  </div>
+</a>

@@ -1,0 +1,35 @@
+<div class="container">
+  <app-searchbar (searchFor)="setFilter($event)" />
+
+  <div class="wrapper">
+    <div class="search-collections">
+      <h3>Collections:</h3>
+      <ul>
+        <li
+          [ngClass]="{'selected': currentCollection == ''}"
+          (click)="setCurrentCollection('')"
+        >All</li>
+        <li
+          *ngFor="let collection of collections$ | async"
+          [ngClass]="{'selected': currentCollection == collection.id}"
+          (click)="setCurrentCollection(collection.id)"
+        >{{collection.title}}</li>
+      </ul>
+    </div>
+    <div class="search-sort">
+      <h3>Sort by:</h3>
+      <ul>
+        <li
+          *ngFor="let option of sortOptions"
+          [ngClass]="{'selected': sortKey == option.key}"
+          (click)="setSortKey(option.key)"
+        >{{option.label}}</li>
+      </ul>
+    </div>
+    <mat-grid-list class="search-grid" [cols]="cols" gutterSize="16px">
+      <mat-grid-tile *ngFor="let product of products$ | async; let i = index">
+        <app-product-tile [product]="product" />
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

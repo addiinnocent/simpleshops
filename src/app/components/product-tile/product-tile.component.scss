@@ -1,0 +1,16 @@
+.img-container {
+  margin: 20%;
+  transition: margin 0.3s ease;
+}
+
+.img-container:hover {
+  margin: 18%;
+}
+
+.product-title-chip {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  height: 40px;
+  border-radius: 40px;
+}

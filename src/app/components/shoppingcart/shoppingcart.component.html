@@ -1,0 +1,71 @@
+<div class="container shoppingcart-wrapper">
+  <div class="shoppingcart-row">
+  <h2>Shoppingcart</h2>
+    <button mat-icon-button (click)="handleCloseButton()">
+      <mat-icon>
+        close
+      </mat-icon>
+    </button>
+  </div>
+  <mat-list class="shoppingcart-list">
+    <div *ngIf="(lines | async)?.length; else empty">
+      <div *ngFor="let line of lines | async">
+        <mat-list-item  lines="2">
+          <mat-icon class="remove-icon" matListItemIcon button (click)="handleRemove(line.id)">
+            close
+          </mat-icon>
+
+          <span matListItemTitle>
+            {{line.merchandise.product.title}}
+          </span>
+
+          <span matListItemLine>
+            Size: {{line.merchandise.title}}
+          </span>
+
+          <span matListItemMeta>
+            <span>
+              {{line.merchandise.priceV2.amount*line.quantity|currency}}
+            </span>
+            <app-product-quantity [line]="line" />
+          </span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <p>Your shoppingcart is empty</p>
+    </ng-template>
+  </mat-list>
+
+  <div class="shoppingcart-proceed">
+    <div class="proceed-item">
+      <span>Taxes</span>
+      <span>None</span>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="proceed-item">
+      <span>Shipping</span>
+      <span>Calculated at checkout</span>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="proceed-item">
+      <span>Total</span>
+      <span>{{(total|async)|currency}}</span>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="container">
+      <button
+        mat-fab
+        extended
+        color="primary"
+        (click)="handleCheckoutButton()"
+        [disabled]="!(lines | async)?.length"
+      >Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
